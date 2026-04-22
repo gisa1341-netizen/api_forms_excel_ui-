@@ -2,35 +2,127 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pesquisa Bike</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #009c3b, #ffdf00);
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.banner {
+    width: 100%;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #009c3b;
+    margin-top: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    display: block;
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-group label:hover {
+    background: #e6f7ec;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #009c3b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #007a2f;
+}
+
+.footer {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    margin-top: 15px;
+}
+</style>
+
 </head>
 
-<body style="font-family: Arial; background: linear-gradient(135deg,#009c3b,#ffdf00); text-align:center;">
+<body>
+
+<div class="container">
+
+<img class="banner" src="https://images.unsplash.com/photo-1518655048521-f130df041f66">
 
 <h1>🚴‍♂️ Sua opinião vale ouro!</h1>
-<p>Leva menos de 1 minuto 🙌</p>
+<p class="subtitle">Leva menos de 1 minuto 🙌</p>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdvNEMlqTDVd8xUSrmpywiOmC9hDT3jmMXeFolUdD6SHw-Fmg/formResponse" method="POST" target="_blank">
 
-<!-- NOME -->
-<input type="text" name="entry.2084268918" placeholder="Seu nome" required><br><br>
+<input type="text" name="entry.2084268918" placeholder="Seu nome" required>
 
-<!-- EXPERIÊNCIA -->
-<input type="text" name="entry.1249038358" placeholder="Como foi sua experiência?" required><br><br>
+<input type="number" name="entry.1854844795" placeholder="Nota de 0 a 10" min="0" max="10" required>
 
-<!-- NOTA -->
-<input type="number" name="entry.1854844795" min="0" max="10" placeholder="Nota de 0 a 10" required><br><br>
+<input type="text" name="entry.1249038358" placeholder="Como foi sua experiência?" required>
 
-<!-- INDICAÇÃO -->
-<p>Você indicaria?</p>
+<p><strong>Você indicaria nosso app?</strong></p>
 
-<label><input type="radio" name="entry.962558575" value="Sim"> Sim</label><br>
-<label><input type="radio" name="entry.962558575" value="Não indicaria"> Não indicaria</label><br>
-<label><input type="radio" name="entry.962558575" value="Com ressalvas"> Com ressalvas</label><br><br>
+<div class="radio-group">
+<label><input type="radio" name="entry.962558575" value="Sim"> 👍 Sim</label>
+<label><input type="radio" name="entry.962558575" value="Indicaria com ressalvas"> ⚠️ Com ressalvas</label>
+<label><input type="radio" name="entry.962558575" value="Após melhorias"> 🔧 Após melhorias</label>
+<label><input type="radio" name="entry.962558575" value="Não indicaria"> 👎 Não indicaria</label>
+</div>
 
-<button type="submit">Enviar</button>
+<button type="submit">Enviar resposta</button>
 
 </form>
+
+<div class="footer">
+💚 Sua resposta nos ajuda a melhorar sua experiência
+</div>
+
+</div>
 
 </body>
 </html>
