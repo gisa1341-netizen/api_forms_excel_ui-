@@ -2,124 +2,35 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisa - Loja de Bicicletas</title>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #009c3b, #ffdf00);
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        max-width: 600px;
-        margin: 40px auto;
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-        text-align: center;
-        color: #009c3b;
-    }
-
-    p {
-        text-align: center;
-        color: #333;
-    }
-
-    .banner {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 15px;
-    }
-
-    .question {
-        margin: 20px 0;
-    }
-
-    label {
-        display: block;
-        margin: 10px 0;
-        padding: 10px;
-        background: #f1f1f1;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    label:hover {
-        background: #e0f7e9;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        background: #009c3b;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #007a2f;
-    }
-
-    .footer {
-        text-align: center;
-        margin-top: 15px;
-        color: #555;
-    }
-</style>
+<title>Pesquisa Bike</title>
 </head>
 
-<body>
+<body style="font-family: Arial; background: linear-gradient(135deg,#009c3b,#ffdf00); text-align:center;">
 
-<div class="container">
+<h1>🚴‍♂️ Sua opinião vale ouro!</h1>
+<p>Leva menos de 1 minuto 🙌</p>
 
-    <!-- IMAGEM DO TOPO -->
-    <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66" class="banner">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSdvNEMlqTDVd8xUSrmpywiOmC9hDT3jmMXeFolUdD6SHw-Fmg/formResponse" method="POST" target="_blank">
 
-    <h1>🚴‍♂️ Sua opinião vale ouro!</h1>
-    <p>Leva menos de 1 minuto 🙌</p>
+<!-- NOME -->
+<input type="text" name="entry.2084268918" placeholder="Seu nome" required><br><br>
 
-    <form>
+<!-- EXPERIÊNCIA -->
+<input type="text" name="entry.1249038358" placeholder="Como foi sua experiência?" required><br><br>
 
-        <div class="question">
-            <h3>Você indicaria nosso aplicativo de bicicletas para outra pessoa?</h3>
+<!-- NOTA -->
+<input type="number" name="entry.1854844795" min="0" max="10" placeholder="Nota de 0 a 10" required><br><br>
 
-            <label>
-                <input type="radio" name="resposta"> 👍 Sim
-            </label>
+<!-- INDICAÇÃO -->
+<p>Você indicaria?</p>
 
-            <label>
-                <input type="radio" name="resposta"> ⚠️ Indicaria, mas com ressalvas
-            </label>
+<label><input type="radio" name="entry.962558575" value="Sim"> Sim</label><br>
+<label><input type="radio" name="entry.962558575" value="Não indicaria"> Não indicaria</label><br>
+<label><input type="radio" name="entry.962558575" value="Com ressalvas"> Com ressalvas</label><br><br>
 
-            <label>
-                <input type="radio" name="resposta"> 🔧 Indicaria após melhorias
-            </label>
+<button type="submit">Enviar</button>
 
-            <label>
-                <input type="radio" name="resposta"> 👎 Não indicaria
-            </label>
-        </div>
-
-        <button type="submit">Enviar resposta</button>
-
-    </form>
-
-    <div class="footer">
-        💚 Sua resposta nos ajuda a melhorar sua experiência
-    </div>
-
-</div>
+</form>
 
 </body>
 </html>
