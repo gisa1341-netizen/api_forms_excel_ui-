@@ -1,36 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Avaliação Bike Shop</title>
-</head>
-<body class="bg-gray-100 p-6">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa - Loja de Bicicletas</title>
 
-    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border-t-8 border-green-700">
-        <div class="h-40 bg-green-800 flex items-center justify-center text-yellow-400">
-            <h1 class="text-3xl font-bold">Bike World Cup Shop</h1>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #009c3b, #ffdf00);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #009c3b;
+    }
+
+    p {
+        text-align: center;
+        color: #333;
+    }
+
+    .banner {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .question {
+        margin: 20px 0;
+    }
+
+    label {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        background: #f1f1f1;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    label:hover {
+        background: #e0f7e9;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #009c3b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #007a2f;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 15px;
+        color: #555;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- IMAGEM DO TOPO -->
+    <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66" class="banner">
+
+    <h1>🚴‍♂️ Sua opinião vale ouro!</h1>
+    <p>Leva menos de 1 minuto 🙌</p>
+
+    <form>
+
+        <div class="question">
+            <h3>Você indicaria nosso aplicativo de bicicletas para outra pessoa?</h3>
+
+            <label>
+                <input type="radio" name="resposta"> 👍 Sim
+            </label>
+
+            <label>
+                <input type="radio" name="resposta"> ⚠️ Indicaria, mas com ressalvas
+            </label>
+
+            <label>
+                <input type="radio" name="resposta"> 🔧 Indicaria após melhorias
+            </label>
+
+            <label>
+                <input type="radio" name="resposta"> 👎 Não indicaria
+            </label>
         </div>
 
-        <form class="p-8 space-y-6">
-            <div>
-                <label class="block text-gray-700 font-bold mb-2">Conheça nosso App:</label>
-                <img src="https://via.placeholder.com/600x200/FACC15/000?text=Screenshot+do+Seu+App" alt="App Preview" class="rounded-lg shadow-md mb-4">
-            </div>
+        <button type="submit">Enviar resposta</button>
 
-            <div>
-                <label class="block text-gray-700 font-bold mb-4">Você indicaria nosso app para um amigo?</label>
-                <div class="grid grid-cols-1 gap-3">
-                    <button type="button" class="bg-green-100 hover:bg-green-200 p-3 rounded border border-green-600 text-left">🤩 Com certeza!</button>
-                    <button type="button" class="bg-yellow-50 hover:bg-yellow-100 p-3 rounded border border-yellow-400 text-left">🤔 Indicaria, mas com ressalvas</button>
-                    <button type="button" class="bg-blue-100 hover:bg-blue-200 p-3 rounded border border-blue-600 text-left">🛠️ Indicaria depois de melhorias</button>
-                    <button type="button" class="bg-red-100 hover:bg-red-200 p-3 rounded border border-red-600 text-left">👎 Não indicaria no momento</button>
-                </div>
-            </div>
+    </form>
 
-            <button type="submit" class="w-full bg-green-700 text-white font-bold py-3 rounded-lg hover:bg-green-800 transition">Enviar Avaliação</button>
-        </form>
+    <div class="footer">
+        💚 Sua resposta nos ajuda a melhorar sua experiência
     </div>
+
+</div>
 
 </body>
 </html>
